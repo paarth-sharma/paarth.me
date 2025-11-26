@@ -1,7 +1,6 @@
 baseURL = "https://paarth-sharma.vercel.app/"
 languageCode = "en-us"
 title = "paarth.me"
-theme = ""
 
 [params]
   author = "Paarth Sharma"
