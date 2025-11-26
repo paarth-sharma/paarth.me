@@ -1,0 +1,16 @@
+{{ define "main" }}
+<h1 style="margin: 0 0 20px 0;">{{ .Title }}</h1>
+
+{{ .Content }}
+
+{{ if .Pages }}
+<hr style="margin: 30px 0;">
+
+{{ range .Pages }}
+<p style="margin: 10px 0 0 0; font-size: 14px; color: #666;">{{ .Date.Format "January 2, 2006" }}</p>
+<p style="margin: 5px 0;"><a href="{{ .RelPermalink }}" style="color: blue;">{{ .Title }}</a></p>
+<p style="margin: 0 0 20px 0;">{{ .Summary }}</p>
+<hr style="margin: 30px 0;">
+{{ end }}
+{{ end }}
+{{ end }}

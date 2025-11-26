@@ -1,0 +1,89 @@
+baseURL = "https://yourname.com/"
+languageCode = "en-us"
+title = "paarth.me"
+theme = ""
+
+[params]
+  author = "Paarth Sharma"
+  description = "Personal website and blog"
+  
+[menu]
+  [[menu.main]]
+    name = "home"
+    url = "/"
+    weight = 1
+  
+  [[menu.main]]
+    name = "about"
+    url = "/about/"
+    weight = 2
+  
+  [[menu.main]]
+    name = "blog"
+    url = "/blog/"
+    weight = 3
+
+  [[menu.main]]
+    name = "games"
+    url = "/games/"
+    weight = 4
+
+  [[menu.main]]
+    name = "photos"
+    url = "/photos/"
+    weight = 5
+  
+  [[menu.main]]
+    name = "reading"
+    url = "/reading/"
+    weight = 6
+
+  [[menu.main]]
+    name = "code"
+    url = "/code/"
+    weight = 7
+
+  [[menu.main]]
+    name = "projects"
+    url = "/projects/"
+    weight = 8
+
+  [[menu.main]]
+    name = "zines"
+    url = "/zines/"
+    weight = 9
+
+  [[menu.main]]
+    name = "links"
+    url = "/links/"
+    weight = 10
+
+  [[menu.main]]
+    name = "now"
+    url = "/now/"
+    weight = 11
+
+  [[menu.main]]
+    name = "uses"
+    url = "/uses/"
+    weight = 12
+
+  [[menu.main]]
+    name = "music"
+    url = "/music/"
+    weight = 13
+
+  [[menu.main]]
+    name = "colophon"
+    url = "/colophon/"
+    weight = 14
+
+  [[menu.main]]
+    name = "changelog"
+    url = "/changelog/"
+    weight = 15
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

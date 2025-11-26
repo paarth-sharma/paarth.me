@@ -1,0 +1,21 @@
+<p style="margin: 0 0 5px 0;"><strong>{{ .Site.Title }}</strong></p>
+
+{{ $currentPage := . }}
+{{ range .Site.Menus.main }}
+  {{ $isActive := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+  {{ $isActive = or $isActive (eq $currentPage.RelPermalink .URL) }}
+  {{ if eq .URL "/" }}
+    {{ $isActive = and $currentPage.IsHome (not $currentPage.IsNode) }}
+  {{ end }}
+  
+  {{ if $isActive }}
+<p style="margin: 0; padding: 3px 5px; background-color: #ffcccc;"><a href="{{ .URL }}" style="text-decoration: none; color: black;">{{ .Name }}</a></p>
+  {{ else }}
+<p style="margin: 0;"><a href="{{ .URL }}" style="text-decoration: none; color: black;">{{ .Name }}</a></p>
+  {{ end }}
+{{ end }}
+
+<br><br>
+{{ range .Site.Menus.secret }}
+<p style="margin: 0;"><a href="{{ .URL }}" style="text-decoration: none; color: black;">{{ .Name }}</a></p>
+{{ end }}
