@@ -1,0 +1,9 @@
+- title: "Home NAS Zine: OMV 7 Setup Guide"
+  url: "/zines/omv7-nas-zine"
+  date: "Nov 20, 2025"
+  description: "A visual guide to building a Raspberry Pi NAS with OpenMediaVault 7"
+
+- title: "Pi-hole Zine: Network Ad Blocking with Docker"
+  url: "/zines/pihole-docker-zine"
+  date: "Nov 20, 2025"
+  description: "Deploy Pi-hole as a network-wide ad blocker in Docker on OMV 7"

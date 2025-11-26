@@ -21,7 +21,14 @@
 <h3 style="margin: 0 0 10px 0;">latest posts</h3>
 
 {{ $posts := where .Site.RegularPages "Section" "blog" }}
-{{ range first 6 $posts }}
+{{ $excludeFiles := slice "omv7-homeserver-setup.md" "pihole-omv7-portainer.md" }}
+{{ $filteredPosts := slice }}
+{{ range $posts }}
+  {{ if not (in $excludeFiles .File.LogicalName) }}
+    {{ $filteredPosts = $filteredPosts | append . }}
+  {{ end }}
+{{ end }}
+{{ range first 6 $filteredPosts }}
 <p style="margin: 10px 0 0 0; font-size: 14px; color: #666;">{{ .Date.Format "Jan 2, 2006" }}</p>
 <p style="margin: 5px 0;"><a href="{{ .RelPermalink }}" style="color: blue;">{{ .Title }}</a></p>
 <p style="margin: 0 0 20px 0;">{{ .Summary }}</p>
@@ -30,6 +37,16 @@
 </td>
 <td width="4%"></td>
 <td width="48%" valign="top">
+
+<h3 style="margin: 0 0 10px 0;">latest zines</h3>
+
+{{ range .Site.Data.zines }}
+<p style="margin: 10px 0 0 0; font-size: 14px; color: #666;">{{ .date }}</p>
+<p style="margin: 5px 0;"><a href="{{ .url }}" style="color: blue;">{{ .title }}</a></p>
+<p style="margin: 0 0 20px 0;">{{ .description }}</p>
+{{ end }}
+
+<br>
 
 <h3 style="margin: 0 0 10px 0;">latest videos</h3>
 
