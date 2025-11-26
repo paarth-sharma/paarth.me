@@ -5,7 +5,7 @@
   {{ $isActive := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
   {{ $isActive = or $isActive (eq $currentPage.RelPermalink .URL) }}
   {{ if eq .URL "/" }}
-    {{ $isActive = and $currentPage.IsHome (not $currentPage.IsNode) }}
+    {{ $isActive = $currentPage.IsHome }}
   {{ end }}
   
   {{ if $isActive }}

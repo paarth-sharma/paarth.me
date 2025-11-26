@@ -38,6 +38,16 @@ title: "Home NAS Zine: OMV 7 Setup Guide"
                     +------------------+
 ```
 
+### System Architecture
+
+```mermaid
+graph LR
+    R[Router] --> PI[OMV 7<br/>Pi] --> SSD[(SSD)]
+    R --> PC[PC] & Phone
+    PI -.->|Tailscale| Internet
+    style PI fill:#f9f,stroke:#333
+```
+
 ---
 
 ## HARDWARE SHOPPING LIST
@@ -310,6 +320,15 @@ tailscale ip -4
 # Connect using 100.x.x.x
 ```
 
+### Access Methods
+
+```mermaid
+flowchart LR
+    W[Windows] & A[Android] & I[iOS] -->|SMB| NAS[OMV]
+    Remote -->|Tailscale| NAS
+    style NAS fill:#f96,stroke:#333
+```
+
 ---
 
 ## QUICK REFERENCE CARD
@@ -364,6 +383,20 @@ tailscale ip -4
      v         v           Check IP   Start it:
   Check    Check          hostname -I  systemctl
   blacklist power                      start smbd
+```
+
+### Drive Detection Troubleshooting
+
+```mermaid
+flowchart LR
+    A[Not Detected] --> B{lsusb?}
+    B -->|No| C[Check cable]
+    B -->|Yes| D{lsblk?}
+    D -->|No| E[Remove blacklist<br/>+ modprobe]
+    D -->|Yes| F{OMV sees?}
+    F -->|No| G[Clear cache]
+    F -->|Yes| H[✅ Ready]
+    style H fill:#9f9,stroke:#333
 ```
 
 ---

@@ -57,6 +57,23 @@ title: "Pi-hole Zine: Network Ad Blocking with Docker"
     +----------------------------------------+
 ```
 
+### DNS Query Flow
+
+```mermaid
+flowchart LR
+    Devices -->|DNS| R[Router] -->|DNS| PH[Pi-hole<br/>macvlan] -->|Filtered| UP[1.1.1.1]
+    style PH fill:#f96,stroke:#333
+```
+
+### How Queries Are Processed
+
+```mermaid
+flowchart LR
+    D[Device] -->|Query| P[Pi-hole]
+    P -->|Ad?| B[Block 0.0.0.0]
+    P -->|OK| U[Upstream] --> D
+```
+
 ---
 
 ## THE ARCHITECTURE
@@ -120,6 +137,13 @@ title: "Pi-hole Zine: Network Ad Blocking with Docker"
         |
         v
 [9] TEST & ENJOY AD-FREE LIFE!
+```
+
+### Setup Flow Diagram
+
+```mermaid
+flowchart LR
+    A[Docker] --> B[Portainer] --> C[Dirs] --> D[Macvlan] --> E[Pi-hole] --> F[Router]
 ```
 
 ---
@@ -449,6 +473,20 @@ https://ads-blocker.com/testing/
 ---
 
 ## TROUBLESHOOTING
+
+### Troubleshooting Flow
+
+```mermaid
+flowchart LR
+    A[Issue] --> B{Running?}
+    B -->|No| C[Check: NET_ADMIN,<br/>Port 53, Perms]
+    B -->|Yes| D{Admin OK?}
+    D -->|No| E[Use other device]
+    D -->|Yes| F{Blocking?}
+    F -->|No| G[Check router DNS]
+    F -->|Yes| H[✅ Working]
+    style H fill:#9f9,stroke:#333
+```
 
 ### CONTAINER WON'T START
 
