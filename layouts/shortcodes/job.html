@@ -1,0 +1,9 @@
+{{- $dates := .Get "dates" -}}
+<div style="position: relative; border-left: 2px solid #000; margin-left: 6px; padding: 0 0 20px 20px;">
+  <span style="position: absolute; left: -8px; top: 3px; width: 12px; height: 12px; background: #ffcccc; border: 2px solid #000; border-radius: 50%;"></span>
+  {{- with $dates }}
+  <p style="margin: 0; font-size: 14px; color: #666;">{{ . }}</p>
+  {{- end }}
+  <p style="margin: 3px 0;"><strong>{{ .Get "role" }}</strong>, {{ .Get "company" }}</p>
+  <div>{{ .Inner | markdownify }}</div>
+</div>

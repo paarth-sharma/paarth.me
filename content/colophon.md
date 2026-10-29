@@ -13,9 +13,9 @@ This site embraces **brutalist web design** - minimal styling, semantic HTML, an
 - **Generator:** Hugo static site generator
 - **Templates:** Go templates
 - **CSS:** Minimal inline styles
-- **JavaScript:** None (by design)
+- **JavaScript:** Almost none. The only script is [Mermaid](https://mermaid.js.org/), loaded from a CDN, and it only renders the diagrams in some posts and zines
 - **Font:** System font stack
-- **Hosting:** [Your hosting provider]
+- **Hosting:** Vercel
 
 ## inspiration
 
@@ -25,11 +25,9 @@ This site embraces **brutalist web design** - minimal styling, semantic HTML, an
 
 ## performance
 
-- Page size: ~3KB (uncompressed)
-- Load time: <100ms
+- Plain HTML with a few inline styles, so pages are tiny
 - No tracking or analytics
-- Works without JavaScript
-- 100% accessible
+- Works without JavaScript (only the diagrams need it)
 
 ## license
 

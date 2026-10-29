@@ -1,0 +1,13 @@
+{{- $href := .Get "href" -}}
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "photo" -}}
+<div>
+{{- if $src }}
+  <a href="{{ $href }}" target="_blank" rel="noopener" title="{{ $alt }}">
+    <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy" referrerpolicy="no-referrer" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;">
+  </a>
+  <p style="margin: 5px 0 0 0; font-size: 14px; color: #666;">{{ $alt }}</p>
+{{- else }}
+  <a href="{{ $href }}" target="_blank" rel="noopener" style="color: blue;">{{ $alt }} (view on 500px)</a>
+{{- end }}
+</div>
