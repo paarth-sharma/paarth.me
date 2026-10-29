@@ -8,7 +8,7 @@ I'm a Computer Engineer, casual gamer, drummer and beginner home-labber.
 
 ## what i do
 
-I build things for the web and write about technology, design, and life. Currently working on [sudo-kanban](https://sudo-kanban.up.railway.app).
+I build things for the web and write about technology, design, and life. Currently working on ComplianceOS
 
 ## interests
 

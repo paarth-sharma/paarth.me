@@ -12,12 +12,12 @@ Visual guide to building a Raspberry Pi NAS with OpenMediaVault 7. Includes driv
 **[Pi-hole Zine: Network Ad Blocking](/zines/pihole-docker-zine)**
 Deploy Pi-hole in Docker on OMV 7 with Portainer. Features macvlan networking, privacy-focused DNS, and visual troubleshooting guides.
 
-## shrines
+<!-- ## shrines
 
 Dedicated pages celebrating things I love:
 
 - [[Topic] Shrine](#) - Everything about [topic]
-- [[Interest] Collection](#) - Curated resources
+- [[Interest] Collection](#) - Curated resources -->
 
 ## what are zines?
 

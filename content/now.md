@@ -9,7 +9,9 @@ This is a [now page](https://nownownow.com/about), inspired by Derek Sivers. It'
 ## timeline
  
 {{< job dates="May 2026 – Present" role="Senior Analyst, Tech Consulting (ML & Data Engineering)" company="EY, Gurgaon" >}}
-Delivering production software end to end: architecture, REST API design, integration, deployment and documentation, and building the UI/UX from the ground up.
+Currently prototyping an internal ETL+insights tool that implements custom data-transformation & analytics
+reducing data ingestion and write to system from 1-2 days for 10M SAP records to under 5 minutes
+constrained to just a laptop.
 {{< /job >}}
  
 {{< job dates="Sep 2025 – Mar 2026" role="Data Engineering, Analytics & ML Intern" company="Hero MotoCorp IT, Gurgaon" >}}
